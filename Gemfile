@@ -33,9 +33,6 @@ gem 'jbuilder', '~> 2.5'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
-# Provides a better error page for Rails and other Rack apps. Includes source code inspection, a live REPL and local/instance variable inspection for all stack frames.
-gem 'better_errors', '~> 2.5'
-
 # A modern CSS framework based on Flexbox
 gem 'bulma-rails', '~> 0.7.2'
 
@@ -52,10 +49,18 @@ end
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'web-console', '>= 3.3.0'
+
   # Guard is a command line tool to easily handle events on file system modifications.
   gem 'guard', '~> 2.14', '>= 2.14.2'
+
   # Guard::LiveReload automatically reloads your browser when 'view' files are modified.
   gem 'guard-livereload', '~> 2.5', '>= 2.5.2', require: false
+
+  # Provides a better error page for Rails and other Rack apps. Includes source code inspection, a live REPL and local/instance variable inspection for all stack frames.
+  gem 'better_errors', '~> 2.5'
+  
+  # Retrieve the binding of a method's caller. Can also retrieve bindings even further up the stack.
+  gem 'binding_of_caller', '~> 0.8.0'
 end
 
 group :test do
