@@ -1,1 +1,27 @@
-<h1 class= "title">Blog Posts</h1>
+<%= content_for :page_title, "All Blog Posts" %>
+
+<section class="section">
+  <div class="container">
+    <% @posts.each do |post| %>
+    <div class="card">
+      <header class="card-header">
+        <p class="card-header-title">
+          <%= post.title %>
+        </p>
+        <span class="tag is-info"><%= post.tags %></span>
+      </header>
+      <div class="card-content">
+        <div class="content">
+          <%= truncate(post.content, length:100) %>
+        </div>
+      </div>
+      <footer class="card-footer">
+        <%= link_to  "Show", post, class: "card-footer-item" %>
+        <a href="#" class="card-footer-item">Edit</a>
+        <a href="#" class="card-footer-item">Delete</a>
+      </footer>
+    </div>
+    <br>
+    <% end %>
+  </div>
+</section>

@@ -1,6 +1,4 @@
-<div style="margin-top: 15px;">
-  <h1 class = "title">New post</h1>
-<hr>
+<%= content_for :page_title, "New Post" %>
 <div class="section">
   <%= simple_form_for @post do |form| %>
   <div class="field">
@@ -20,5 +18,4 @@
   </div>
   <%= form.button :submit, 'Create new post', class: "button is-primary" %>
   <% end %>
-</div>
 </div>
