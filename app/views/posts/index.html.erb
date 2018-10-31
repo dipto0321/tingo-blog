@@ -15,10 +15,12 @@
           <%= truncate(post.content, length:100) %>
         </div>
       </div>
-      <footer class="card-footer">
-        <%= link_to  "Show", post, class: "card-footer-item" %>
-        <a href="#" class="card-footer-item">Edit</a>
-        <a href="#" class="card-footer-item">Delete</a>
+      <footer class="card-footer level">
+        <%= link_to  "Show", post, class: "card-footer-item button is-success is-outlined level-item" %>
+        <%= link_to  "Edit", edit_post_path(post), class: "card-footer-item button is-outlined is-primary level-item" %>
+        <%= link_to  "Delete", post_path(post),
+         method: :delete,
+         data: { confirm: "Are you sure? "}, class: "card-footer-item button is-danger is-outlined level-item"  %>
       </footer>
     </div>
     <br>
