@@ -1,0 +1,20 @@
+<div class="section">
+  <%= simple_form_for @post do |form| %>
+  <div class="field">
+    <div class="control">
+      <%= form.input :title, input_html: { class: 'input' }, label_html: { class: 'label'}, wrapper: false %>
+    </div>
+  </div>
+  <div class="field">
+    <div class="control">
+      <%= form.input :tags, input_html: { class: 'input' }, label_html: { class: 'label'}, wrapper: false %>
+    </div>
+  </div>
+  <div class="field">
+    <div class="control">
+      <%= form.input :content, input_html: { class: 'textarea' }, label_html: { class: 'label'}, wrapper: false %>
+    </div>
+  </div>
+  <%= form.button :submit, class: "button is-primary" %>
+  <% end %>
+</div>

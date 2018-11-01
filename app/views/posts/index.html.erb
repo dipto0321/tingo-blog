@@ -1,0 +1,29 @@
+<%= content_for :page_title, "All Blog Posts" %>
+
+<section class="section">
+  <div class="container">
+    <% @posts.each do |post| %>
+    <div class="card">
+      <header class="card-header">
+        <p class="card-header-title">
+          <%= post.title %>
+        </p>
+        <span class="tag is-info"><%= post.tags %></span>
+      </header>
+      <div class="card-content">
+        <div class="content">
+          <%= truncate(post.content, length:100) %>
+        </div>
+      </div>
+      <footer class="card-footer level">
+        <%= link_to  "Show", post, class: "card-footer-item button is-success is-outlined level-item" %>
+        <%= link_to  "Edit", edit_post_path(post), class: "card-footer-item button is-outlined is-primary level-item" %>
+        <%= link_to  "Delete", post_path(post),
+         method: :delete,
+         data: { confirm: "Are you sure? "}, class: "card-footer-item button is-danger is-outlined level-item"  %>
+      </footer>
+    </div>
+    <br>
+    <% end %>
+  </div>
+</section>
