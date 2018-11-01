@@ -66,7 +66,6 @@ group :test do
 end
 
 group :production do
-  # Pg is the Ruby interface to the {PostgreSQL RDBMS}
   gem 'pg'
 end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
