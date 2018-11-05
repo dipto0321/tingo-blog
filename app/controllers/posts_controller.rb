@@ -12,8 +12,10 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
 
     if @post.save
+      flash[:success] = 'Great! Your post has been created!'
       redirect_to @post
     else
+      flash.now[:error] = 'Rats! Fix your mistakes, please.'
       redirect_to 'new'
     end
   end

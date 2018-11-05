@@ -15,5 +15,6 @@
       </div>
     </div>
     <%= link_to  "Delete", [comment.post, comment], method: :delete, data: { confirm: "Are you sure ? "}, class: "button is-danger" %>
+    <%= link_to  "Edit", edit_post_comment_path(@post, comment), class: "button is-warning" %>
   </article>
 </div>
