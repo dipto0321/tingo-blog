@@ -15,9 +15,13 @@ class CommentsController < ApplicationController
     # do code
   end
 
-  # def update
-    
-  # end
+  def update
+    if @post.comments.update(comment_params)
+      redirect_to @post
+    else
+      redirect_to 'edit'
+    end
+  end
 
   def destroy
     @comment.destroy

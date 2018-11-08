@@ -1,4 +1,5 @@
-<%= simple_form_for([@post, @post.comments.build]) do |form| %>
+<% arg = params[:action] == 'edit' ? @comment : @post.comments.build %>
+<%= simple_form_for([@post, arg]) do |form| %>
   <div class="field">
     <div class="control">
       <%= form.input :name, input_html: { class: 'input' }, label_html: { class: 'label'}, wrapper: false %>
