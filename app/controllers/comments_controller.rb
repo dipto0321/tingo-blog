@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CommentsController < ApplicationController
   before_action :find_comment, only: %i[show update edit destroy]
 
@@ -27,7 +29,6 @@ class CommentsController < ApplicationController
     @comment.destroy
     redirect_to post_path(@post)
   end
-
 
   private
 

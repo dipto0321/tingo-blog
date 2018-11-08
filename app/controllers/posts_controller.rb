@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class PostsController < ApplicationController
   before_action :find_post, only: %i[show update edit destroy]
   def index
