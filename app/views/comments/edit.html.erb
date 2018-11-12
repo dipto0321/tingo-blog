@@ -1,5 +1,4 @@
-<h1>Edit comment</h1>
-
+<%= content_for :page_title, "Edit '#{@post.title}' Comment of #{params[:id]}" %>
 <div class="section">
   <%= render  "form" %>
 </div>
