@@ -1,25 +1,20 @@
-# README
+# Tingo Blog
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a personal bloging app.
 
-Things you may want to cover:
+### Usage:
 
-- Ruby version
+- Ruby version: `2.5.3`
 
-- System dependencies
+- System dependencies: `Ubuntu, Windows 10, Mac` 
 
-- Configuration
+- Configuration: `Pre configured`
 
-- Database creation
+- Database creation: `rails db:create`
 
-- Database initialization
+- Database initialization: `rails db:migrate`
 
-- How to run the test suite
+- Deployment instructions: Follow heroku instruction
 
-- Services (job queues, cache servers, search engines, etc.)
-
-- Deployment instructions
-
-- Screencast
+### Screencast
   ![Tingo Blog](tingo-blog.gif)
