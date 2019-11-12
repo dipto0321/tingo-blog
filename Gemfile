@@ -36,7 +36,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 
 # A modern CSS framework based on Flexbox
-gem 'bulma-rails', '~> 0.7.2'
+gem 'bulma-rails', '~> 0.8.0'
 
 # Forms made easy!
 gem 'simple_form', '~> 4.0', '>= 4.0.1'
